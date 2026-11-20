@@ -38,3 +38,22 @@ jobs:
         run: brew install --cask consolelabs/tap/spacedown
       - name: Check the app
         run: test -d /Applications/Spacedown.app && spctl -a -vv -t exec /Applications/Spacedown.app
+
+  formula:
+    # Explicit image, never *-latest.
+    runs-on: macos-26
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Tap this checkout
+        run: brew tap consolelabs/tap "$GITHUB_WORKSPACE"
+      - name: Trust this tap
+        run: brew trust consolelabs/tap
+      - name: Audit
+        run: brew audit --strict --online consolelabs/tap/handout && brew audit --cask --strict --online consolelabs/tap/handout-bar
+      - name: Install
+        run: brew install consolelabs/tap/handout
+      - name: Test
+        run: brew test consolelabs/tap/handout
