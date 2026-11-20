@@ -1,8 +1,8 @@
 cask "handout-bar" do
-  version "0.9.0"
-  sha256 "193a480a5b10ac90bb64c96b96fadb5f51114a1d3e306593a0dd74eec11f62d9"
+  version "0.10.0"
+  sha256 "19aad2a6f3a2961a8f3a20e4539ae47afb660e501ce2deb2cb05b0230672ac4c"
 
-  url "https://github.com/consolelabs/handout/releases/download/v#{version}/Share-Bar-#{version}.zip"
+  url "https://github.com/consolelabs/handout/releases/download/v#{version}/Handout-Bar-#{version}.zip"
   name "Handout Bar"
   desc "Menu bar app for handout: live status, quick links, drag-to-publish"
   homepage "https://github.com/consolelabs/handout"
@@ -15,7 +15,7 @@ cask "handout-bar" do
   depends_on formula: "consolelabs/tap/handout"
   depends_on macos: :ventura
 
-  app "Share Bar.app"
+  app "Handout Bar.app"
 
   uninstall quit: "foundation.d.share.bar"
 
