@@ -1,8 +1,8 @@
 class Handout < Formula
   desc "Publish files, folders, and dev servers at a link on your own domain"
   homepage "https://github.com/consolelabs/handout"
-  url "https://github.com/consolelabs/handout/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "4054d1fc62e2c9c6ea08dbe98279fee55ddb5cd02fcd775fb91986671c9d3b6e"
+  url "https://github.com/consolelabs/handout/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "11ad58f2d715e2fc8e291716cd7b1d158252a9d05dda4f99d9343c5caf93d94b"
   license "MIT"
   head "https://github.com/consolelabs/handout.git", branch: "main"
 
