@@ -2,7 +2,7 @@ cask "handout-bar" do
   version "0.9.0"
   sha256 "193a480a5b10ac90bb64c96b96fadb5f51114a1d3e306593a0dd74eec11f62d9"
 
-  url "https://github.com/consolelabs/handout/releases/download/v0.9.0/Share-Bar-0.9.0.zip"
+  url "https://github.com/consolelabs/handout/releases/download/v#{version}/Share-Bar-#{version}.zip"
   name "Handout Bar"
   desc "Menu bar app for handout: live status, quick links, drag-to-publish"
   homepage "https://github.com/consolelabs/handout"
